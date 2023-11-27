@@ -40,6 +40,11 @@ services:
             - local_postgres_data_backups:/backups
         env_file:
             - ./.envs/.local/.postgres
+        healthcheck:
+            test: [ "CMD", "pg_isready" ]
+            interval: 10s
+            timeout: 5s
+            retries: 5
         networks:
             - authors-api
 

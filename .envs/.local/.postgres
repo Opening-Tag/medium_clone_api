@@ -3,3 +3,5 @@ POSTGRES_PORT=5432
 POSTGRES_DB=authors-live
 POSTGRES_USER=ikumi
 POSTGRES_PASSWORD=Password123456
+POSTGRES_HOST_AUTH_METHOD=password
+DATABASE_URL=postgres://ikumi:Password123456@postgres:5432/authors-live
